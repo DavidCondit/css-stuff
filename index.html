@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="spinner.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+    <div>
+        <input class="toggler" type="button" onclick="toggleLoading()" value="Toggle Loading">
+    </div>
+    <div class="content">
+        <div class="spinner u-center-xy"></div>
+        <div class="overlay"></div>
+        <label for="someTextBox">Yadda yadda</label>
+        <input name="someTextBox" type="text">
+    </div>
+</body>
+
+<script>
+    function toggleLoading() {
+        if (document.getElementsByClassName('u-show').length === 0) {
+            document.getElementsByClassName('spinner')[0].classList.add('u-show');
+            document.getElementsByClassName('overlay')[0].classList.add('overlay--pink');
+        } else {
+            document.getElementsByClassName('spinner')[0].classList.remove('u-show');
+            document.getElementsByClassName('overlay')[0].classList.remove('overlay--pink');
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+.spinner {
+    display: none;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: .5rem solid rgba(128, 160, 201, 0.5);
+    border-top: .5rem solid royalblue;
+    background-clip: padding-box; /* In case I add a background to the spinner, this will keep it from bleeding into the border. */
+    /* border-bottom: .5rem solid royalblue;  */
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
